@@ -1,0 +1,392 @@
+body {
+  background-color: #000000;
+  background-image: url('bg-img.png');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  color: #bbb;
+  font-family: "Dosis", serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
+.menu {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 10px 0;
+  z-index: 1;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 18px;
+  padding: 10px 20px;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  background-color: #37527e5e;
+  color: #0d0d0d;
+}
+
+.menu a.active {
+  background-color: #37527e;
+  color: #ffffff;
+  font-weight: normal;
+}
+
+
+.firstWord {
+  display: flex;
+  gap: 20px;
+  position: fixed;
+  justify-content: left;
+  top: 0;
+  left: 0;
+  font-size: 20px;
+  background-color: #ffffff;
+  padding: 10px 0;
+  z-index: 2;
+}
+
+.firstWord a {
+  text-decoration: none;
+  color: #2e5182;
+  font-size: 18px;
+  padding: 10px 20px;
+  transition: 0.3s;
+}
+
+.firstWord a:hover {
+  background-color: #c3ff0081;
+  color: #0d0d0d;
+}
+
+.firstWord a.active {
+  background-color: #c3ff00;
+  color: #000000;
+  font-weight: normal;
+}
+
+.iframe-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+iframe {
+  max-width: 500px;
+  width: 100%;
+  height: 120px;
+}
+
+section {
+  margin-top: 150px;
+}
+
+.bio-section {
+  max-width: 800px;
+  margin: 150px auto 0 auto;
+  padding: 20px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.push-down {
+  margin-top: 350px; /* Adjust this value to control how much space is added */
+}
+
+.push-down-more {
+  margin-top: 100px; /* Adjust this value to control how much space is added */
+}
+
+.push-down-lots {
+  margin-top: 700px; /* Adjust this value to control how much space is added */
+}
+
+/* Hamburger icon styles */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  z-index: 2;
+}
+
+a {
+  text-decoration: none;
+  color: #c3ff00; /* Inherit the text color from the parent element */
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 1000px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .menu a {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+
+  .firstWord {
+    font-size: 18px;
+    padding: 8px;
+  }
+
+  .bio-section {
+    margin-top: 180px;
+    font-size: 16px;
+    padding: 5%;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu a {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  .firstWord {
+    font-size: 16px;
+    padding: 6px;
+  }
+
+  .bio-section {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.instagram-logo {
+  width: 30px; /* Adjust size */
+  height: 30px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.instagram-logo:hover {
+  transform: scale(1.1);
+}
+
+/* CSS for photo page with Paypal*/
+
+.photo-display {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: center;
+  max-width: 100%;
+}
+.photo-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.photo-item img {
+  width: 500px;
+  height: 500px;
+  object-fit: contain;
+  /* border-radius: 8px;  Gives images a radius of 8px */
+}
+.photo-item p {
+  font-family: 'Dosis', sans-serif;
+  font-size: 1em;
+  margin-top: 8px;
+}
+.photo-item form {
+  margin-top: 10px;
+}
+.buy-button {
+  background-color: #37527e;
+  color: white;
+  font-family: 'Dosis', sans-serif;
+  font-size: 1em;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.buy-button:hover {
+  background-color: #333;
+}
+
+@media (max-width: 768px) {
+  .photo-grid {
+      grid-template-columns: repeat(1, 1fr);
+      margin-top: 700px;
+  }
+}
+
+/* NEW MENU */
+
+/* Style for "Quiet Wonder" text */
+.quiet-wonder {
+  font-size: 18px; /* Initial size */
+  /*font-weight: normal;*/
+  color: #ffffff; /* Default color */
+  display: inline-block;
+  transition: transform 0.5s ease, color 0.5s ease; /* Smooth transition for size and color */
+}
+
+/* Hover effect for enlarging and changing color */
+.quiet-wonder:hover {
+  transform: scale(1.5); /* Enlarge to 150% on hover */
+  color: #c3ff00; /* Change to lime green on hover */
+}
+
+/* Suggest to the browser that the transform and color will change */
+.quiet-wonder {
+  will-change: transform, color; /* Performance optimization */
+}
+
+
+
+/* Optional: Add a little spacing between elements if desired */
+h1, .quiet-wonder {
+  margin: 20px;
+}
+
+/*test*/
+
+.bio-section {
+  position: relative;
+  text-align: center;
+  padding: 50px 0;
+}
+
+.moving-text {
+  display: inline-block;
+}
+
+.word {
+  display: inline-block;
+  animation: moveText 10s ease-in-out infinite;
+}
+
+.word:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.word:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.word:nth-child(3) {
+  animation-delay: 2s;
+}
+
+.word:nth-child(4) {
+  animation-delay: 3s;
+}
+
+.word:nth-child(5) {
+  animation-delay: 4s;
+}
+
+.dot-com {
+  display: inline-block;
+  animation: moveDotCom 5s ease-in-out infinite;
+  animation-delay: 5s; /* Add a delay so it moves at a different time */
+}
+
+@keyframes moveText {
+  0% {
+      transform: translateX(0);
+  }
+  50% {
+      transform: translateX(150px); /* Move 150px to the right */
+  }
+  100% {
+      transform: translateX(0); /* Return to the center */
+  }
+}
+
+@keyframes moveDotCom {
+  0% {
+      transform: translateX(0);
+  }
+  50% {
+      transform: translateX(150px); /* Move 150px to the right */
+  }
+  100% {
+      transform: translateX(0); /* Return to the center */
+  }
+}
+
+.bottom-bar {
+  position: absolute;
+  bottom: 20px; /* Adjust distance from the bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap; /* Prevent text from wrapping */
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+}
+
+.bottom-bar a {
+  color: blue;
+  text-decoration: none;
+  margin-left: 10px; /* Space between text and link */
+}
+
+.bottom-bar a:hover {
+  text-decoration: underline;
+}
+
+.left-text {
+  position: absolute;
+  left: 20px; /* Distance from the left edge */
+  top: 50%;
+  transform: translateY(-50%); /* Center vertically */
+  font-size: 18px;
+
+}
