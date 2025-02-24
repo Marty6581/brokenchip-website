@@ -93,6 +93,10 @@ iframe {
   height: 120px;
 }
 
+.lower {
+  margin-top: 1000px;
+}
+
 section {
   margin-top: 150px;
 }
