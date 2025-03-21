@@ -11,6 +11,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            margin: 0;
             background-color: #f4f4f4;
         }
         .container {
@@ -21,21 +22,36 @@
             width: 100%;
             max-width: 400px;
         }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end; /* Aligning form elements to the right */
+        }
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+            width: 100%;
+            text-align: left; /* Keep label aligned to the left */
+        }
         input, textarea {
             width: 100%;
             padding: 10px;
-            margin: 10px 0;
+            margin-bottom: 15px;
             border: 1px solid #ccc;
             border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box; /* Ensures padding doesn't affect width */
         }
         button {
-            width: 100%;
             padding: 10px;
             background: #28a745;
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            font-size: 16px;
+            width: 100%; /* Ensures button matches width of inputs */
+            box-sizing: border-box; /* Ensures padding doesn't affect width */
         }
         button:hover {
             background: #218838;
