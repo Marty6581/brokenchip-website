@@ -92,7 +92,7 @@
             class="emoji">&#119082;&#119082;&#119082;&#119082;&#119082;&#119082;&#119082;&#119082;&#119082;&#119082;&#119082;&#119082;&#119082;&#119082;&#119082;&#119082;&#119082;</span><br>
         <span style="font-size: 2.5em; color: #c3ff00;">&#9734;</span>
         <div class="form-container">
-            <form name="contact" id="contact-form">
+            <form name="contact" id="contact-form" method="POST" data-netlify="true">
               <input type="hidden" name="form-name" value="contact">
         
               <label for="name">Name:</label>
@@ -105,6 +105,7 @@
               <textarea id="message" name="message" rows="4" required></textarea>
         
               <button type="submit">Send</button>
+                
             </form>
         
             <p id="success-message" class="message">Thank you! Your message has been sent.</p>
