@@ -134,6 +134,10 @@ section {
   z-index: 2;
 }
 
+body.menu-open .hamburger {
+  color: #000000;
+}
+
 a {
   text-decoration: none;
   color: #c3ff00; /* Inherit the text color from the parent element */
@@ -145,6 +149,10 @@ a {
     display: none;
     flex-direction: column;
     align-items: center;
+  }
+
+  .menu.show {
+    display: flex;
   }
 
   .hamburger {
@@ -180,10 +188,13 @@ a {
   }
 
   .bio-section {
-    font-size: 14px;
+    font-size: 18px;
     padding: 10px;
+    margin-top: calc(400px + 60px + 20px);
   }
 }
+
+/* Footer */
 
 .footer {
   display: flex;
@@ -393,4 +404,12 @@ h1, .quiet-wonder {
   transform: translateY(-50%); /* Center vertically */
   font-size: 18px;
 
+}
+
+
+.bio-section {
+  position: relative;
+  text-align: center;
+  padding: 50px 5%; /* 50px top/bottom, 5% left/right */
+  
 }
