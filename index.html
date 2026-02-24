@@ -1,60 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="favicon.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Broken Chip</title>
-    <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index,follow">
-    <meta name="keywords" content="ambient,music,australian,experimental,soundtrack,drone,photography">
-    <style>
-        body#index {
-            margin: 0;
-            overflow: hidden;
-            position: relative;
-        }
-        .symbol {
-            position: absolute;
-            font-size: 20pt;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 
+<title>Broken Chip</title>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Raleway+Dots&family=Sono:wght,MONO@200..800,1&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body {
+  font-family: "Sono", monospace;
+  font-weight:200;
+  background:#faf9f9;
+  color:#111;
+  line-height:1.6;
+}
+
+/* HEADER */
+header {
+  position:fixed;
+  width:100%;
+  top:0;
+  left:0;
+  padding:1.5rem 2rem;
+  display:flex;
+  justify-content:flex-start; /* everything left */
+  align-items:center;
+  background:rgba(255,255,255,0.85);
+  backdrop-filter: blur(8px);
+  z-index:1000;
+  gap:3rem; /* space between logo + nav */
+}
+
+.logo img {
+  height: 28px;     /* controls logo size */
+  width: auto;
+  display: block;
+}
+
+/* Horizontal nav */
+nav {
+  display:flex;
+  gap:2rem;
+}
+
+nav a {
+  text-decoration:none;
+  font-family:"Dosis", sans-serif;
+  font-weight:300;
+  color:#6d6d6d;
+  transition:opacity 0.7s ease;
+}
+
+nav a:hover {
+  opacity:0.1;
+}
+
+/* SECTIONS */
+section {
+  min-height:100vh;
+  padding:8rem 2rem 4rem 2rem;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+/* HERO */
+.hero h1 {
+  font-family:"Dosis", sans-serif;
+  font-size:clamp(2.5rem, 5vw, 4rem);
+  font-weight:200;
+  margin-bottom:1rem;
+}
+
+/* HEADINGS */
+h2 {
+  font-family:"Dosis", sans-serif;
+  font-weight:500;
+  margin-bottom:1rem;
+}
+
+/* ABOUT */
+#about {
+  align-items:flex-start;
+}
+
+#about p {
+  max-width:700px;
+  width:50vw;
+}
+
+/* WORK */
+.work-list {
+  margin-top:3rem;
+  max-width:600px;
+}
+
+.work-item {
+  display:block;
+  text-decoration:none;
+  color:inherit;
+  margin-bottom:2.5rem;
+  transition:opacity 0.3s ease;
+}
+
+.work-item:hover {
+  opacity:0.5;
+}
+
+.work-item h3 {
+  font-family:"Dosis", sans-serif;
+  font-weight:500;
+  margin-bottom:0.5rem;
+}
+
+.work-item p {
+  font-size:0.9rem;
+}
+
+/* CONTACT */
+#contact p a {
+  text-decoration:none;
+  color:#111;
+  transition:opacity 0.3s ease;
+}
+
+#contact p a:hover {
+  opacity:0.6;
+}
+
+
+/* Link Styling */
+.hero a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.3s ease;
+}
+
+.hero a:hover {
+  opacity: 0.5;
+}
+
+/* RESPONSIVE */
+@media (max-width:768px) {
+
+  #about p {
+    width:100%;
+    max-width:100%;
+  }
+
+  header {
+    padding:1rem;
+  }
+
+  nav {
+    gap:1rem;
+  }
+
+  section {
+    padding:7rem 1.5rem 3rem 1.5rem;
+  }
+}
+</style>
 </head>
 
-<body id="index">
-    <div class="firstWord">
-        <a href="index.html" class="active">Broken Chip</a>
-    </div>
-    <div class="menu" id="menu">
-        <a href="about.html">About</a>
-        <a href="music.html">Releases</a>
-        <a href="soundtracks.html">Soundtracks</a>
-        <a href="patch-design.html">Synth Presets</a>
-        <a href="photography.html">Photography</a>
-        <a href="contact.html">Contact</a>
-    </div>
-    <div class="hamburger" id="hamburger">
-        &#9776; <!-- Hamburger icon -->
-    </div>
+<body>
 
-    <section class="bio-section">
-        <span class="emoji">&#119082;&#119082;&#119082;&#119082;&#119082;&#119082;&#119082;<span>&#119082;</span>&#119082;&#119082;&#119082;&#119082;&#119082;&#119082;&#119082;&#119082;&#119082;</span><br>
-        <p><a href="about.html" class="quiet-wonder">quiet wonder</a></p>
-    </section>
-    <footer class="bottom-text">
-       <span> <p>Follow me on</p>
-        <a href="https://www.instagram.com/brokenchip/" target="_blank">
-            <img src="icons8-instagram-64.png" alt="Instagram" class="instagram-logo">
-        </a></span>
-    </footer>
-    <script src="script.js"></script>
+<header>
+  <div class="logo">
+    <a href="https://brokenchip.bandcamp.com/music" target="_blank">
+  <img src="images/bandcamp-button-bc-circle-black-64.png" alt="Bandcamp logo"></a>
+</div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#work">Music</a>
+    <a href="https://www.instagram.com/brokenchip/" target="_blank">Photography</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Broken Chip</h1>
+ <p>
+  music // 
+  <a href="https://www.instagram.com/brokenchip/" target="_blank">Photography</a>
+</p>
+</section>
+
+<section id="about">
+  <h2>About</h2>
+  <p>
+  Broken Chip is the sonic alias of Australian musician and photographer Martyn Palmer, known for crafting deeply immersive ambient soundscapes that blend warm, organic textures with delicate electronic flourishes. Drawing inspiration from nature, memory, and the quiet beauty of everyday moments, Broken Chip's music often sits at the intersection of lowercase, drone, and ambient experimentalism.
+  <br>
+  <br>
+
+With a background in field recording and sound design, Palmer uses processed environmental sounds, granular synthesis, and subtle melodic fragments to create introspective, meditative compositions. His work has been released on labels such as Home Normal, Flaming Pines and Feral Media, and he has performed alongside a diverse range of artists in the ambient and experimental music scene.
+ <br>
+  <br>
+Whether drifting through shimmering drones or crafting intricate micro-sounds, Broken Chips music invites listeners into a world of stillness, reflection, and quiet wonder.
+  </p>
+</section>
+
+<section id="work">
+  <h2>Selected Music</h2>
+  <div class="work-list">
+
+    <a href="https://brokenchip.bandcamp.com/album/slow-confession" target="_blank" class="work-item">
+      <h3>Slow Confession</h3>
+      <p>Ambient / Textural piano & field recordings</p>
+    </a>
+
+    <a href="https://brokenchip.bandcamp.com/album/the-quiet-garden" target="_blank" class="work-item">
+      <h3>The Quiet Garden</h3>
+      <p>Serene soundscapes / Garden ambience</p>
+    </a>
+
+    <a href="https://brokenchip.bandcamp.com/album/just-below-the-surface" target="_blank" class="work-item">
+      <h3>Just Below the Surface</h3>
+      <p>Nocturnal synths / Foggy soundscapes</p>
+    </a>
+
+    <a href="https://brokenchip.bandcamp.com/album/beyond" target="_blank" class="work-item">
+      <h3>Beyond</h3>
+      <p>Liminal drones / Misty textures</p>
+    </a>
+
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p> brokenchip at gmail dot com</p>
+  <p>
+    <a href="https://www.instagram.com/brokenchip/" target="_blank">Instagram</a><br>
+    <a href="https://brokenchip.bandcamp.com" target="_blank">Bandcamp</a>
+  </p>
+</section>
 
 </body>
-
 </html>
